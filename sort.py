@@ -8,7 +8,7 @@ def normalize(name):
         'а': 'a', 'б': 'b', 'в': 'v', 'г': 'h', 'ґ': 'g', 'д': 'd', 'е': 'e', 'є': 'ie', 'ж': 'zh',
         'з': 'z', 'и': 'y', 'і': 'i', 'ї': 'i', 'й': 'i', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
         'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'kh', 'ц': 'ts',
-        'ч': 'ch', 'ш': 'sh', 'щ': 'shch', 'ю': 'iu', 'я': 'ia'
+        'ч': 'ch', 'ш': 'sh', 'щ': 'shc', 'ю': 'iu', 'я': 'ia'
     }
     translit_alphabet = 'abcdefghijklmnopqrstuvwxyz0123456789'
     name = name.lower()
@@ -32,11 +32,10 @@ def sort_folder(path):
             
             # Обробка архівів
             if file_extension in ['.zip', '.gz', '.tar']:
-                new_dir_name = os.path.join(root, file_name)
-                new_dir_path = os.path.join(root, new_dir_name)
-                if not os.path.exists(new_dir_path):
-                    os.makedirs(new_dir_path)
-                shutil.unpack_archive(file_path, new_dir_path)
+                target_folder = os.path.join(root, 'archives')
+                if not os.path.exists(target_folder):
+                    os.makedirs(target_folder)
+                shutil.unpack_archive(file_path, target_folder)
                 os.remove(file_path)
                 continue
             
