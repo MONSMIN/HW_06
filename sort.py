@@ -57,7 +57,7 @@ def sort_folder(path):
             
             # Невідомі файли
             else:
-                target_folder = os.path.join(root, 'unknown')
+                target_folder = os.path.join(root, 'other')
             
             if not os.path.exists(target_folder):
                 os.makedirs(target_folder)
