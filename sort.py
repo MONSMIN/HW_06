@@ -77,6 +77,7 @@ if __name__ == '__main__':
         # Перевірка чи існує папка з вказаним шляхом
         if os.path.isdir(path):
             sort_folder(path)
+            print(f"Папка '{path}' відсортована")
         else:
             print(f"Папки '{path}' не існує")
     else:
