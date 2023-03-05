@@ -63,7 +63,7 @@ def sort_folder(path):
                 os.makedirs(target_folder)
                 
             shutil.move(file_path, os.path.join(target_folder, new_file_name))
-            
+        # Видаляє пусті папки    
         for dir in dirs:
             dir_path = os.path.join(root, dir)
             if not os.listdir(dir_path):
