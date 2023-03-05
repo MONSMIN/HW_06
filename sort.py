@@ -134,18 +134,7 @@ if __name__ == '__main__':
 # import os
 # import shutil
 
-# def normalize(name):
-#     translit_dict = {
-#         'а': 'a', 'б': 'b', 'в': 'v', 'г': 'h', 'ґ': 'g', 'д': 'd', 'е': 'e', 'є': 'ie', 'ж': 'zh',
-#         'з': 'z', 'и': 'y', 'і': 'i', 'ї': 'i', 'й': 'i', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
-#         'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'kh', 'ц': 'ts',
-#         'ч': 'ch', 'ш': 'sh', 'щ': 'shch', 'ю': 'iu', 'я': 'ia'
-#     }
-#     translit_alphabet = 'abcdefghijklmnopqrstuvwxyz0123456789'
-#     name = name.lower()
-#     name = ''.join([translit_dict.get(i, i) for i in name])
-#     name = ''.join([i if i in translit_alphabet else '_' for i in name])
-#     return name
+
 
 
 
